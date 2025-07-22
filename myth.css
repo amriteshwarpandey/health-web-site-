@@ -1,0 +1,300 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #4CAF50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #FFD700;
+}
+
+/* Section Styles */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 75vw; /* Set section width to 75% of the viewport width */
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section */
+.hero {
+    background: url('image1.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* Carousel Section */
+.carousel-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 100%;  /* Make image width 100% of its container */
+    height: 400px; /* Set a fixed height for consistency */
+    object-fit: cover;  /* Ensure the images cover the area without distortion */
+}
+
+/* Adjust carousel captions to be more readable */
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Call to Action Section */
+.cta {
+    background: url('cta-bg.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 50px 20px;
+}
+
+.cta-content {
+    text-align: center;
+}
+
+/* Myths Section */
+.myth-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.myth-card {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.myth-card:hover {
+    background: #e9e9e9;
+    transform: scale(1.02);
+}
+
+.answer {
+    display: none;
+    margin-top: 10px;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.myth-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Articles and Resources Section */
+.article-list, .resource-list {
+    list-style: none;
+    padding: 0;
+}
+
+.article-list li, .resource-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.article-list li:last-child, .resource-list li:last-child {
+    border-bottom: none;
+}
+
+.article-list a, .resource-list a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.article-list a:hover, .resource-list a:hover {
+    color: #FFD700;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #45a049;
+}
+
+/* Footer Styling */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #4CAF50;
+}
+
+/* Disable the default action of the links */
+a.disabled-link {
+    pointer-events: none; /* Makes links unclickable */
+    cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .carousel-item img {
+        height: auto;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: url('image1.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2; /* Ensure text stays on top of the overlay */
+  }
+  
+  /* Add a dark overlay to improve text visibility */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark semi-transparent overlay */
+    z-index: 1; /* Place it behind the text */
+  }
+  
+  /* CTA Section */
+  .cta {
+    background: url('cta-bg.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 50px 20px;
+    position: relative;
+    text-align: center;
+  }
+  
+  .cta-content {
+    position: relative;
+    z-index: 2; /* Ensure text stays on top of the overlay */
+  }
+  
+  /* Add a dark overlay to improve text visibility */
+  .cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:#4CAF50; /* Dark semi-transparent overlay */
+    z-index: 1; /* Place it behind the text */
+  }
+  
